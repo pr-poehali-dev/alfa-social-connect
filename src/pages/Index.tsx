@@ -114,7 +114,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8">
               <h1 className="text-2xl font-bold bg-gradient-to-r from-red-600 to-black bg-clip-text text-transparent">
-                Alfa People
+                Alfa Social
               </h1>
               <nav className="hidden md:flex gap-1">
                 <Button
