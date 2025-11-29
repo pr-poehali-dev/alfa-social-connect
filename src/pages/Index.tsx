@@ -54,7 +54,7 @@ const Index = () => {
       name: 'IT & Development',
       members: 2847,
       icon: 'Code2',
-      gradient: 'from-violet-500 to-purple-600',
+      gradient: 'from-red-600 to-black',
       description: 'Обсуждаем технологии, архитектуру и код',
     },
     {
@@ -62,7 +62,7 @@ const Index = () => {
       name: 'Design & UX',
       members: 1523,
       icon: 'Palette',
-      gradient: 'from-pink-500 to-rose-600',
+      gradient: 'from-lime-400 to-green-500',
       description: 'Тренды дизайна и пользовательский опыт',
     },
     {
@@ -70,7 +70,7 @@ const Index = () => {
       name: 'Product Management',
       members: 1891,
       icon: 'Target',
-      gradient: 'from-blue-500 to-cyan-600',
+      gradient: 'from-black to-gray-800',
       description: 'Продуктовые стратегии и метрики',
     },
     {
@@ -78,7 +78,7 @@ const Index = () => {
       name: 'Sales & Marketing',
       members: 2134,
       icon: 'TrendingUp',
-      gradient: 'from-orange-500 to-amber-600',
+      gradient: 'from-red-500 to-lime-400',
       description: 'Продажи, маркетинг и развитие бизнеса',
     },
   ];
@@ -108,12 +108,12 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-50 via-white to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-red-50">
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-violet-600 to-pink-600 bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-red-600 to-black bg-clip-text text-transparent">
                 Alfa People
               </h1>
               <nav className="hidden md:flex gap-1">
@@ -154,8 +154,8 @@ const Index = () => {
               <Button variant="ghost" size="icon">
                 <Icon name="Bell" size={20} />
               </Button>
-              <Avatar className="h-10 w-10 ring-2 ring-violet-500 ring-offset-2">
-                <AvatarFallback className="bg-gradient-to-br from-violet-500 to-pink-500 text-white font-semibold">
+              <Avatar className="h-10 w-10 ring-2 ring-red-600 ring-offset-2">
+                <AvatarFallback className="bg-gradient-to-br from-red-600 to-black text-white font-semibold">
                   ВИ
                 </AvatarFallback>
               </Avatar>
@@ -168,7 +168,7 @@ const Index = () => {
         {activeTab === 'feed' && (
           <div className="grid lg:grid-cols-[1fr_320px] gap-6">
             <div className="space-y-6">
-              <Card className="shadow-lg border-0 bg-gradient-to-br from-violet-500 to-pink-500 text-white overflow-hidden">
+              <Card className="shadow-lg border-0 bg-gradient-to-br from-red-600 to-black text-white overflow-hidden">
                 <CardContent className="pt-6">
                   <h2 className="text-2xl font-bold mb-2">Персонализируйте свою ленту</h2>
                   <p className="text-white/90 mb-4">
@@ -181,7 +181,7 @@ const Index = () => {
                         variant="secondary"
                         className={`cursor-pointer transition-all hover:scale-105 ${
                           selectedInterests.includes(interest.id)
-                            ? 'bg-white text-violet-600 hover:bg-white/90'
+                            ? 'bg-lime-400 text-black hover:bg-lime-300'
                             : 'bg-white/20 text-white hover:bg-white/30'
                         }`}
                         onClick={() => toggleInterest(interest.id)}
@@ -200,7 +200,7 @@ const Index = () => {
                 <CardContent className="pt-6">
                   <div className="flex gap-3 mb-4">
                     <Avatar>
-                      <AvatarFallback className="bg-gradient-to-br from-violet-500 to-pink-500 text-white">
+                      <AvatarFallback className="bg-gradient-to-br from-red-600 to-black text-white">
                         ВИ
                       </AvatarFallback>
                     </Avatar>
@@ -229,7 +229,7 @@ const Index = () => {
                     <div className="flex items-start justify-between">
                       <div className="flex gap-3">
                         <Avatar>
-                          <AvatarFallback className="bg-gradient-to-br from-violet-500 to-pink-500 text-white font-semibold">
+                          <AvatarFallback className="bg-gradient-to-br from-red-600 to-black text-white font-semibold">
                             {post.avatar}
                           </AvatarFallback>
                         </Avatar>
@@ -254,15 +254,15 @@ const Index = () => {
                       ))}
                     </div>
                     <div className="flex items-center gap-6 pt-2 border-t">
-                      <Button variant="ghost" size="sm" className="gap-2 text-gray-600 hover:text-violet-600">
+                      <Button variant="ghost" size="sm" className="gap-2 text-gray-600 hover:text-red-600">
                         <Icon name="Heart" size={18} />
                         {post.likes}
                       </Button>
-                      <Button variant="ghost" size="sm" className="gap-2 text-gray-600 hover:text-violet-600">
+                      <Button variant="ghost" size="sm" className="gap-2 text-gray-600 hover:text-red-600">
                         <Icon name="MessageCircle" size={18} />
                         {post.comments}
                       </Button>
-                      <Button variant="ghost" size="sm" className="gap-2 text-gray-600 hover:text-violet-600">
+                      <Button variant="ghost" size="sm" className="gap-2 text-gray-600 hover:text-red-600">
                         <Icon name="Share2" size={18} />
                         Поделиться
                       </Button>
@@ -282,7 +282,7 @@ const Index = () => {
                     <div key={i} className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <Avatar className="h-10 w-10">
-                          <AvatarFallback className="bg-gradient-to-br from-orange-400 to-pink-500 text-white">
+                          <AvatarFallback className="bg-gradient-to-br from-lime-400 to-green-500 text-black">
                             {['МК', 'ИС', 'АЛ'][i - 1]}
                           </AvatarFallback>
                         </Avatar>
@@ -309,7 +309,7 @@ const Index = () => {
         {activeTab === 'communities' && (
           <div>
             <div className="mb-8">
-              <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-violet-600 to-pink-600 bg-clip-text text-transparent">
+              <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-red-600 to-black bg-clip-text text-transparent">
                 Профессиональные сообщества
               </h2>
               <p className="text-gray-600">Находите единомышленников и развивайтесь вместе</p>
@@ -353,14 +353,14 @@ const Index = () => {
         {activeTab === 'skills' && (
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
-              <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-violet-600 to-pink-600 bg-clip-text text-transparent">
+              <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-red-600 to-black bg-clip-text text-transparent">
                 Центр компетенций
               </h2>
               <p className="text-gray-600">Отслеживайте развитие навыков и достигайте целей</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-4 mb-8">
-              <Card className="shadow-lg border-0 bg-gradient-to-br from-violet-500 to-purple-600 text-white">
+              <Card className="shadow-lg border-0 bg-gradient-to-br from-red-600 to-black text-white">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Icon name="Target" size={20} />
@@ -373,7 +373,7 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-lg border-0 bg-gradient-to-br from-pink-500 to-rose-600 text-white">
+              <Card className="shadow-lg border-0 bg-gradient-to-br from-lime-400 to-green-500 text-black">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Icon name="TrendingUp" size={20} />
@@ -386,7 +386,7 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-lg border-0 bg-gradient-to-br from-orange-500 to-amber-600 text-white">
+              <Card className="shadow-lg border-0 bg-gradient-to-br from-black to-gray-800 text-white">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Icon name="Award" size={20} />
@@ -433,10 +433,10 @@ const Index = () => {
                   (course, i) => (
                     <div
                       key={course}
-                      className="flex items-center justify-between p-4 border rounded-lg hover:border-violet-500 transition-colors cursor-pointer"
+                      className="flex items-center justify-between p-4 border rounded-lg hover:border-red-600 transition-colors cursor-pointer"
                     >
                       <div className="flex items-center gap-4">
-                        <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-violet-500 to-pink-500 flex items-center justify-center text-white font-bold">
+                        <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-red-600 to-black flex items-center justify-center text-white font-bold">
                           {course[0]}
                         </div>
                         <div>
